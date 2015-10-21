@@ -1,0 +1,11 @@
+<div class="container">
+  <header>
+    <h1>Garage Doors</h1>
+  </header>
+ 
+  <ul>
+    <li ng-repeat="door in vm.doors" ng-class="door.status">
+      {{door.name}}
+    </li>
+  </ul>
+</div>
