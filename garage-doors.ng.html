@@ -4,8 +4,11 @@
   </header>
  
   <ul>
-    <li ng-repeat="door in vm.doors" ng-class="door.status">
+    <li ng-repeat="door in vm.doors" ng-class="[door.status, door.animationClass]" class="door slide animated">
       {{door.name}}
+      <div class="actions">
+        <button ng-click="vm.toggleDoor(door)">{{vm.actionText(vm.oppositeAction(door.status))}} Door</button>
+      </div>
     </li>
   </ul>
 </div>

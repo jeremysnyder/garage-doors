@@ -47,13 +47,43 @@ ul > li
   margin: 15px
   border: #eee solid 1px
   text-align: center
-  
-li.open
-  background-color: red
-  
-li.closed
-  background-color: blue
-  
+  position: relative
+  padding-top: 20px
 
+  div.actions
+    position: absolute
+    right: 5px
+    bottom: 5px
 
+.open
+  background-color: #111111
+  color: white
+
+.closed
+  background-color: beige
+  
+/* The starting CSS styles for the enter animation */
+.open.ng-enter, .closed.ng-enter
+  transition: 1.5s linear all
+  opacity: 0
+
+/* The finishing CSS styles for the enter animation */
+.open.ng-enter-active, .closed.ng-enter-active
+  opacity: 1
+  
+/* The starting CSS styles for the enter animation */
+.fade.ng-enter {
+  transition:0.5s linear all;
+  opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.fade.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+/* The finishing CSS styles for the enter animation */
+.fade.ng-enter.ng-enter-active {
+  opacity:1;
+}
   
